@@ -31,10 +31,10 @@ app.get("/", function (req, res) {
 });
 
 app.post("/", function (req, res) {
-  req.body.username;
-  req.body.password;
+  req.body.email;
+  req.body.pass;
   User.register(
-    new User({ username: req.body.username }),
+    new User({ username: req.body.email }),
     req.body.password,
     function (err, user) {
       if (err) {
@@ -42,10 +42,18 @@ app.post("/", function (req, res) {
         return res.render("signin");
       }
       passport.authenticate("local")(req, res, function () {
-        res.redirect("/home");
+        res.redirect("home");
       });
     }
   );
+});
+
+app.get("/home", function (req, res) {
+  res.render("home");
+});
+
+app.get("/login", function (req, res) {
+  res.render("login");
 });
 
 app.get("/signin", function (req, res) {
@@ -56,9 +64,23 @@ app.get("/signout", function (req, res) {
   res.render("signout");
 });
 
-app.post("/signout", function (req, res) {
-  res.render("signout/fb");
+app.post("/login", function (req, res) {
+  res.redirect("home");
 });
+
+app.get("/logout", (req, res) => {
+  req.logout(req.user, (err) => {
+    if (err) return next(err);
+    res.redirect("/");
+  });
+});
+
+function isLoggedIn(req, res, next) {
+  if (req.isAuthenticated()) {
+    return next();
+  }
+  res.redirect("/login");
+}
 
 app.listen(3000, function () {
   console.log("The server has started.");
