@@ -1,1 +1,4 @@
 mongod --bind_ip=$IP --dbpath=data --nojournal --rest "$@"
+
+
+app token = GG|755591819875941|l2akR_99EdAVbySSrZ8wG6eHaE8

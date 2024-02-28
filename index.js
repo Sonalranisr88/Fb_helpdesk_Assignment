@@ -26,54 +26,54 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+// ROUTES=============================
+
 app.get("/", function (req, res) {
   res.render("signin");
 });
 
-app.post("/", function (req, res) {
-  req.body.email;
-  req.body.pass;
-  User.register(
-    new User({ username: req.body.email }),
-    req.body.password,
-    function (err, user) {
-      if (err) {
-        console.log(err);
-        return res.render("signin");
-      }
-      passport.authenticate("local")(req, res, function () {
-        res.redirect("home");
-      });
-    }
-  );
+app.get("/home", isLoggedIn, function (req, res) {
+  res.render("home");
 });
 
-app.get("/home", function (req, res) {
-  res.render("home");
+app.post("/", function (req, res) {
+  var newUser = new User({ username: req.body.email });
+  User.register(newUser, req.body.pass);
+  passport.authenticate("local");
+  res.redirect("/home");
 });
 
 app.get("/login", function (req, res) {
   res.render("login");
 });
 
-app.get("/signin", function (req, res) {
-  res.render("signin");
+app.post("/login", function (req, res) {
+  res.render("home");
 });
+
+// app.get("/signin", function (req, res) {
+//   res.render("signin");
+// });
+
+// app.post(
+//   "/signin",
+//   passport.authenticate("local", {
+//     successRedirect: "/home",
+//     failureRedirect: "/login",
+//   }),
+//   function (req, res) {}
+// );
 
 app.get("/signout", function (req, res) {
   res.render("signout");
 });
 
-app.post("/login", function (req, res) {
-  res.redirect("home");
-});
-
-app.get("/logout", (req, res) => {
-  req.logout(req.user, (err) => {
-    if (err) return next(err);
-    res.redirect("/");
-  });
-});
+// app.get("/logout", (req, res) => {
+//   req.logout(req.user, (err) => {
+//     if (err) return next(err);
+//     res.redirect("/");
+//   });
+// });
 
 function isLoggedIn(req, res, next) {
   if (req.isAuthenticated()) {
