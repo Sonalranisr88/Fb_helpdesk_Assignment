@@ -31,10 +31,7 @@ router.get("/:comment_id/edit",middleware.checkCommentOwnership, async function(
 
 router.put("/:comment_id", async function(req,res){
     var body = req.body.comment;
-    // console.log("New body", body);
-    // console.log("Show request params", req.params);
     var updatedComment = await Comment.findByIdAndUpdate(req.params.comment_id,(body));
-    // console.log("Updated body", updatedComment);
 
     res.redirect("/campgrounds/");
 });

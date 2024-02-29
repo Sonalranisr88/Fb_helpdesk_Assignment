@@ -19,10 +19,6 @@ router.post("/register",function(req,res){
     User.register(newUser , req.body.password)
     passport.authenticate("local");
     req.flash("success","Welcome to YelpCamp "+ newUser.username);
-    // console.log(user.username);
-    // console.log(User.username);
-    // console.log(newUser);
-    // console.log(newUser.username);
     res.redirect("/home");
     });
 

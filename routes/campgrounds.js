@@ -40,7 +40,7 @@ router.get("/:id/edit",middleware.checkCampgroundOwnership, async function(req,r
 router.put("/:id",middleware.checkCampgroundOwnership, async function(req,res){
         var body = req.body.campground;
         var updateCampground = await Campground.findByIdAndUpdate(req.params.id,(body));
-        res.redirect("/campgrounds/"+ req.params.id);
+        res.redirect("/campgrounds/comments");
     });
 
 router.delete("/:id",middleware.checkCampgroundOwnership, async function(req,res){
