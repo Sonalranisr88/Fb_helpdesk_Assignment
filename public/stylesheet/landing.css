@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Helvetica, serif;
+    background-color: #1261c7;
+  }
+  
+  .logo {
+    width: 240px;
+    height: 85px;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    padding-top: 40px;
+    background-color: #1261c7;
+  }
+  
+  .container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+  }
+  
+  .smallCheckbox {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  .login {
+    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+  }
+  
+  input {
+    width: 85%;
+    height: 50px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    font-size: 15px;
+    padding-left: 20px;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 0.5);
+    outline-style: none;
+  }
+  
+  button {
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: #1877f2;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 14px;
+    margin: 10px;
+    color: #1877f2;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .new-account {
+    width: 50%;
+    background: #42b72a;
+    font-size: 16px;
+    margin: 10px 0 20px 0;
+  }
+  
+  .login-btn:hover {
+    background: #1366d1;
+  }
+  
+  .new-account:hover {
+    background: #3ba327;
+  }
+  
+  .style {
+    position: relative;
+    text-align: center;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .style::before {
+    content: " ";
+    display: block;
+    height: 0.9px;
+    width: 170px;
+    position: absolute;
+    top: 50%;
+    left: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  .style::after {
+    content: " ";
+    display: block;
+    height: 0.9px;
+    width: 170px;
+    position: absolute;
+    top: 50%;
+    right: 25px;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+  

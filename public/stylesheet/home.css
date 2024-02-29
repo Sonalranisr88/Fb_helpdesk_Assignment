@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: Helvetica, serif;
+    background-color: #1261c7;
+  }
+  
+  .logo {
+    width: 240px;
+    height: 85px;
+  }
+  
+  .main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    padding-top: 200px;
+    background-color: #1261c7;
+  }
+  
+  .container {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 200px;
+    align-items: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
+    gap: 10px;
+  }
+  
+  button {
+    width: 90%;
+    height: 50px;
+    border: none;
+    border-radius: 5px;
+    background: #1877f2;
+    color: white;
+    font-size: large;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+  
+  .login {
+    padding-top: 20px;
+    font-size: 1.2rem;
+    margin: 20px 0 10px 0;
+  }
+  
