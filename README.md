@@ -25,21 +25,27 @@ Endpoint |HTTP Method | CRUD Method | Result
 
 ## Screenshot
 
+
 ## Register Screen
-![](/Users/sonalrani/Desktop/images/signin.png)
+
+![](https://github.com/Sonalranisr88/Richpanel_fb_Assignment/assets/104574845/55bfc91f-92bf-449b-9841-fb43b3b5c28f)
 <br />
 
 ## Login Screen
-![]('/Users/sonalrani/Desktop/images/login.png')
+
+![](https://github.com/Sonalranisr88/Richpanel_fb_Assignment/assets/104574845/e2d6ac5f-229d-45e8-b094-6c1cedbe599d)
 <br />
 
 ## Connect your FB Page
-![]('/Users/sonalrani/Desktop/images/fbconnect.png')
+
+![](https://github.com/Sonalranisr88/Richpanel_fb_Assignment/assets/104574845/320b8c02-7b87-4728-ac48-1fabdf65ca6b)
 <br />
 
 ## Delete/Disconnect Page
-![]('/Users/sonalrani/Desktop/images/disconnect.png')
+
+![](https://github.com/Sonalranisr88/Richpanel_fb_Assignment/assets/104574845/3a0f593b-2f44-4d5a-92cd-3eab44b82db5)
 <br />
 ##  Agent Screen
-![]('/Users/sonalrani/Desktop/images/agent_screen.png')
+
+![](https://github.com/Sonalranisr88/Richpanel_fb_Assignment/assets/104574845/fc8a6df3-2130-4727-9b31-23339454e7a6)
 <br />
