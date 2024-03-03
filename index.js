@@ -6,14 +6,7 @@ var express = require("express"),
     passport = require("passport"),
     LocalStrategy = require("passport-local"),
     methodOverride = require("method-override"),
-    Campground = require("./models/campground"),
-    Comment = require("./models/comment"),
     User = require("./models/user"),
-    seedDB   = require("./seeds")
-   
-
-var commentRoutes = require("./routes/comments"),
-    campgroundRoutes = require("./routes/campgrounds"),
     indexRoutes = require("./routes/index")
 
 mongoose.connect("mongodb://127.0.0.1:27017/facebook",
@@ -46,8 +39,6 @@ app.use(function(req,res,next){
 });
 
 app.use("/",indexRoutes);
-app.use("/campgrounds/:id/comments",commentRoutes);
-app.use("/campgrounds",campgroundRoutes);
 
 app.listen(3000,function(){
     console.log("The server started");
