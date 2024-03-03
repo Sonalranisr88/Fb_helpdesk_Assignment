@@ -47,5 +47,5 @@ Endpoint |HTTP Method | CRUD Method | Result
 <br />
 ##  Agent Screen
 
-![](https://github.com/Sonalranisr88/Richpanel_fb_Assignment/assets/104574845/fc8a6df3-2130-4727-9b31-23339454e7a6)
+![](https://github.com/Sonalranisr88/Richpanel_fb_Assignment/assets/104574845/9d41253b-531b-4908-af0a-9e2ddc8276db)
 <br />
